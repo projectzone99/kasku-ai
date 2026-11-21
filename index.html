@@ -573,77 +573,77 @@
         <!-- ROW 1: BALANCED 4-PILLAR COMMAND KPI CARDS (KEUANGAN, INVENTORI, MARKETING, AI) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3.5">
           <!-- PILAR 1: KEUANGAN (Laba Bersih + Omzet & Biaya) -->
-          <div class="q-dark-card p-4 flex flex-col justify-between gap-2">
-            <div class="flex items-center justify-between">
-              <div class="w-9 h-9 rounded-xl icon-3d-glass flex items-center justify-center">
+          <div class="q-dark-card p-4 flex flex-col justify-between gap-2 overflow-hidden min-w-0">
+            <div class="flex items-center justify-between gap-2 min-w-0">
+              <div class="w-9 h-9 rounded-xl icon-3d-glass flex items-center justify-center shrink-0">
                 <i data-lucide="wallet" class="w-4 h-4"></i>
               </div>
-              <span id="kpiMarginBadge" class="text-[10px] font-bold text-emerald-200 bg-white/15 px-2 py-0.5 rounded-full">Keuangan • 0%</span>
+              <span id="kpiMarginBadge" class="text-[10px] font-bold text-emerald-200 bg-white/15 px-2 py-0.5 rounded-full truncate">Keuangan • 0%</span>
             </div>
-            <div class="flex items-end justify-between gap-2">
-              <div>
-                <p class="text-[11px] text-emerald-100/80">Laba Bersih Kas</p>
-                <p id="kpiNet" class="text-lg font-extrabold text-white mt-0.5 whitespace-nowrap">Rp 0</p>
+            <div class="flex items-end justify-between gap-2 min-w-0">
+              <div class="min-w-0 flex-1">
+                <p class="text-[11px] text-emerald-100/80 truncate">Laba Bersih Kas</p>
+                <p id="kpiNet" class="text-base sm:text-lg font-extrabold text-white mt-0.5 truncate">Rp 0</p>
                 <p id="kpiIncomeSub" class="text-[10px] text-emerald-300 font-semibold mt-0.5 truncate">Masuk Rp 0 • Keluar Rp 0</p>
                 <span id="kpiIncome" class="hidden">Rp 0</span>
                 <span id="kpiExpense" class="hidden">Rp 0</span>
                 <span id="kpiExpenseSub" class="hidden">0</span>
               </div>
-              <div class="w-16 h-10 shrink-0"><canvas id="sparkIncome"></canvas></div>
+              <div class="relative w-14 h-9 shrink-0 overflow-hidden"><canvas id="sparkIncome"></canvas></div>
             </div>
           </div>
 
           <!-- PILAR 2: INVENTORI (Nilai Aset Stok + Status SKU Kritis) -->
-          <div class="q-card p-4 flex flex-col justify-between gap-2">
-            <div class="flex items-center justify-between">
-              <div class="w-9 h-9 rounded-xl icon-3d-mint flex items-center justify-center">
+          <div class="q-card p-4 flex flex-col justify-between gap-2 overflow-hidden min-w-0">
+            <div class="flex items-center justify-between gap-2 min-w-0">
+              <div class="w-9 h-9 rounded-xl icon-3d-mint flex items-center justify-center shrink-0">
                 <i data-lucide="boxes" class="w-4 h-4"></i>
               </div>
-              <span id="kpiLowStockPill" class="text-[10px] font-bold text-[#0c4d30] bg-emerald-100 px-2 py-0.5 rounded-full">Inventori • Aman</span>
+              <span id="kpiLowStockPill" class="text-[10px] font-bold text-[#0c4d30] bg-emerald-100 px-2 py-0.5 rounded-full truncate">Inventori • Aman</span>
             </div>
-            <div class="flex items-end justify-between gap-2">
-              <div>
-                <p class="text-[11px] text-slate-400">Nilai Aset Stok</p>
-                <p id="kpiStockVal" class="text-lg font-extrabold text-slate-900 mt-0.5 whitespace-nowrap">Rp 0</p>
-                <p id="kpiStockSub" class="text-[10px] text-slate-500 font-semibold mt-0.5">0 SKU • 0 unit</p>
+            <div class="flex items-end justify-between gap-2 min-w-0">
+              <div class="min-w-0 flex-1">
+                <p class="text-[11px] text-slate-400 truncate">Nilai Aset Stok</p>
+                <p id="kpiStockVal" class="text-base sm:text-lg font-extrabold text-slate-900 mt-0.5 truncate">Rp 0</p>
+                <p id="kpiStockSub" class="text-[10px] text-slate-500 font-semibold mt-0.5 truncate">0 SKU • 0 unit</p>
               </div>
-              <div class="w-16 h-10 shrink-0"><canvas id="sparkStock"></canvas></div>
+              <div class="relative w-14 h-9 shrink-0 overflow-hidden"><canvas id="sparkStock"></canvas></div>
             </div>
           </div>
 
           <!-- PILAR 3: MARKETING (ROAS Promo Aktif + Omzet Promo) -->
-          <div class="q-card p-4 flex flex-col justify-between gap-2">
-            <div class="flex items-center justify-between">
-              <div class="w-9 h-9 rounded-xl icon-3d-dark flex items-center justify-center">
+          <div class="q-card p-4 flex flex-col justify-between gap-2 overflow-hidden min-w-0">
+            <div class="flex items-center justify-between gap-2 min-w-0">
+              <div class="w-9 h-9 rounded-xl icon-3d-dark flex items-center justify-center shrink-0">
                 <i data-lucide="megaphone" class="w-4 h-4"></i>
               </div>
-              <span id="kpiPromoCountPill" class="text-[10px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-full">Marketing • 0 aktif</span>
+              <span id="kpiPromoCountPill" class="text-[10px] font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-full truncate">Marketing • 0 aktif</span>
             </div>
-            <div class="flex items-end justify-between gap-2">
-              <div>
-                <p class="text-[11px] text-slate-400">Rata-rata ROAS Promo</p>
-                <p id="kpiRoasVal" class="text-lg font-extrabold text-slate-900 mt-0.5 whitespace-nowrap">0.0x</p>
-                <p id="kpiRoasSub" class="text-[10px] text-[#15804f] font-semibold mt-0.5">Omzet promo Rp 0</p>
+            <div class="flex items-end justify-between gap-2 min-w-0">
+              <div class="min-w-0 flex-1">
+                <p class="text-[11px] text-slate-400 truncate">Rata-rata ROAS Promo</p>
+                <p id="kpiRoasVal" class="text-base sm:text-lg font-extrabold text-slate-900 mt-0.5 truncate">0.0x</p>
+                <p id="kpiRoasSub" class="text-[10px] text-[#15804f] font-semibold mt-0.5 truncate">Omzet promo Rp 0</p>
               </div>
-              <div class="w-16 h-10 shrink-0"><canvas id="sparkExpense"></canvas></div>
+              <div class="relative w-14 h-9 shrink-0 overflow-hidden"><canvas id="sparkExpense"></canvas></div>
             </div>
           </div>
 
           <!-- PILAR 4: LANGKAH BISNIS AI (Skor Kesehatan + Proyeksi 14 Hari) -->
-          <div class="q-card p-4 flex flex-col justify-between gap-2">
-            <div class="flex items-center justify-between">
-              <div class="w-9 h-9 rounded-xl icon-3d-emerald flex items-center justify-center">
+          <div class="q-card p-4 flex flex-col justify-between gap-2 overflow-hidden min-w-0">
+            <div class="flex items-center justify-between gap-2 min-w-0">
+              <div class="w-9 h-9 rounded-xl icon-3d-emerald flex items-center justify-center shrink-0">
                 <i data-lucide="sparkles" class="w-4 h-4"></i>
               </div>
-              <span id="kpiAiHealthPill" class="text-[10px] font-bold text-[#15804f] bg-emerald-50 px-2 py-0.5 rounded-full">AI • Sangat Sehat</span>
+              <span id="kpiAiHealthPill" class="text-[10px] font-bold text-[#15804f] bg-emerald-50 px-2 py-0.5 rounded-full truncate">AI • Sangat Sehat</span>
             </div>
-            <div class="flex items-end justify-between gap-2">
-              <div>
-                <p class="text-[11px] text-slate-400">Skor Kesehatan Usaha</p>
-                <p id="kpiAiScoreVal" class="text-lg font-extrabold text-slate-900 mt-0.5 whitespace-nowrap">88/100</p>
-                <p id="kpiForecastMini" class="text-[10px] text-[#15804f] font-semibold mt-0.5">Kas 14hr: Rp 0</p>
+            <div class="flex items-end justify-between gap-2 min-w-0">
+              <div class="min-w-0 flex-1">
+                <p class="text-[11px] text-slate-400 truncate">Skor Kesehatan Usaha</p>
+                <p id="kpiAiScoreVal" class="text-base sm:text-lg font-extrabold text-slate-900 mt-0.5 truncate">88/100</p>
+                <p id="kpiForecastMini" class="text-[10px] text-[#15804f] font-semibold mt-0.5 truncate">Kas 14hr: Rp 0</p>
               </div>
-              <div class="w-16 h-10 shrink-0"><canvas id="sparkNet"></canvas></div>
+              <div class="relative w-14 h-9 shrink-0 overflow-hidden"><canvas id="sparkNet"></canvas></div>
             </div>
           </div>
         </div>
@@ -2149,7 +2149,7 @@
         charts[id] = new Chart(ctx, {
           type: 'line',
           data: { labels: values.map((_, i) => i), datasets: [{ data: values, borderColor: colorHex, borderWidth: 2, backgroundColor: grad, fill: true, tension: 0.45, pointRadius: 0 }] },
-          options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false } } }
+          options: { responsive: true, maintainAspectRatio: false, layout: { padding: 2 }, plugins: { legend: { display: false }, tooltip: { enabled: false } }, scales: { x: { display: false }, y: { display: false } } }
         });
       }
 
